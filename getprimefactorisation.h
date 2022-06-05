@@ -1,7 +1,6 @@
 /*
  * C/C++ library to get prime factorisation of a number. This library comes under no license.
- * You are free to use, modify and redistribute this library. Read 'Documentation.md' for
- * documentation.
+ * You are free to use, modify and redistribute this library. Read 'README.md' for documentation.
 */
 
 #ifndef _INC_GETPRIMEFACTORISATION
