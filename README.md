@@ -10,7 +10,7 @@ C/C++ library to get the prime factorisation of a number.
 ## Functions:
 `primefactorisation_t getprimefactorisation(long long n)` -<br />
   Takes `n` as the number to find prime facorisation of.<br />
-  Returns prime factorisation as `struct` `primefactorisation_t`.<br /><br />
+  Returns prime factorisation as `primefactorisation_t`.<br /><br />
 `unsigned short __isprime(long long n)` - For internal use.<br /><br />
 `void __getnextprimenum(long long *prime_num)` - For internal use.<br />
 
