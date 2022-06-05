@@ -3,9 +3,9 @@ C/C++ library to get the prime factorisation of a number.
 
 ## Typedef:
 `primefactorisation_t` -  Structure (C/C++ `struct`) to save prime factorisation of a number.<br />
-  |-- `total` - Total count of numbers found in `factorisation`. Count is always 1 more than the numbers in factorisation.<br />
-  |<br />
-  |-- `factorisation` - Factorisation saved as a dynamic array.<br />
+  `total` - Total count of numbers found in `factorisation`. Count is always 1 more than the numbers in factorisation.<br />
+  <br />
+  `factorisation` - Factorisation saved as a dynamic array.<br />
 
 ## Functions:
 `primefactorisation_t getprimefactorisation(long long n)` -<br />
