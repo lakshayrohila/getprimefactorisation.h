@@ -2,7 +2,7 @@
 C/C++ library to get the prime factorisation of a number.
 
 ## Typedef:
-`primefactorisation_t` -  Structure (C/C++ `struct`) to save prime factorisation of a number.<br />
+`primefactorisation_t` -  Structure (C/C++ `struct`) to save prime factorisation of a number.<br /><br />
 It includes-<br />
   `total` - Total count of numbers found in `factorisation`. Count is always 1 more than the numbers in factorisation.<br />
   <br />
