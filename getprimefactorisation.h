@@ -13,13 +13,13 @@ typedef struct {
     long long total, *factorisation;
 } primefactorisation_t;
 
-unsigned short __isprime(long long n) {
+unsigned short __isprime(register long long n) {
     if(!(n%2)) {
         return 0;
     }
 
-    long j = 3;
-    long long k = (long long)sqrt(n);
+    register long j = 3;
+    register long long k = (long long)sqrt(n);
 
     while(j <= k) {
     	if(!(n%j)) {
@@ -32,18 +32,16 @@ unsigned short __isprime(long long n) {
     return 1;
 }
 
-void __getnextprimenum(long long *prime_num) {
-    if(((*prime_num)+1) == 2) {
-        *prime_num = 2;
-        return;
+long long __getnextprimenum(register long long prime_num) {
+    if((prime_num+1) == 2) {
+        return 2;
     }
 
-    long long i = (*prime_num)-(!((*prime_num)%2))+2;
+    register long long i = prime_num-(!(prime_num%2))+2;
 
     while(1) {
         if(__isprime(i)) {
-            *prime_num = i;
-            return;
+            return i;
         }
 
         i+=2;
@@ -51,7 +49,8 @@ void __getnextprimenum(long long *prime_num) {
 }
 
 primefactorisation_t getprimefactorisation(long long n) {
-    long long *factorisation = malloc(sizeof(long long)), prime_num = 2, i = 0;
+    long long *factorisation = malloc(sizeof(long long));
+    register long long prime_num = 2, i = 0;
     primefactorisation_t factstruct;
 
     if(n == 0) {
@@ -80,7 +79,7 @@ primefactorisation_t getprimefactorisation(long long n) {
     while(n > 1) {
 	    if(!__isprime(n)) {
             while((n%prime_num) != 0) {
-                __getnextprimenum(&prime_num);
+                prime_num = __getnextprimenum(prime_num);
 	        }
 	    } else {
 	        prime_num = n;

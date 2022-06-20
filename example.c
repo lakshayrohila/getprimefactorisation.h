@@ -27,5 +27,8 @@ int main() {
 
     printf("\n");
 
+    // free primefactorisation.factorisation. it is dynamically allocated
+    free(primefactorisation.factorisation);
+
     return 0;
 }
